@@ -1,11 +1,47 @@
-@mixin formBtn($background, $hoverColor) {
-  background: $backgroundColor;
+@mixin btnEdit {
+  background: rgba(255, 255, 0, 0.3);
   width: 66px;
   padding: 4px 0;
   border-radius: 4px;
   &:focus,
   &:hover {
-    background: $hoverColor;
+    background: rgba(255, 255, 0, 0.9);
+    border-radius: 8px;
+  }
+}
+
+@mixin btnDel {
+  background: rgba(255, 0, 0, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+  &:focus,
+  &:hover {
+    background: rgba(255, 0, 0, 0.9);
+    border-radius: 8px;
+  }
+}
+
+@mixin btnCancel {
+  background: rgba(120, 120, 120, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+  &:focus,
+  &:hover {
+    background: rgba(120, 120, 120, 0.9);
+    border-radius: 8px;
+  }
+}
+
+@mixin btnSave {
+  background: rgba(0, 255, 0, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+  &:focus,
+  &:hover {
+    background: rgba(0, 255, 0, 0.9);
     border-radius: 8px;
   }
 }

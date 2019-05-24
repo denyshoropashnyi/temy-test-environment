@@ -1,0 +1,130 @@
+#contactsList tr {
+  cursor: pointer;
+  &:hover {
+    background-color: $highlighted-raw-color;
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+input {
+  cursor: pointer;
+  :hover {
+    color: $input-hover-color;
+  }
+}
+
+.form__table {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr {
+  border: 3px solid #ddd;
+  padding: 5px;
+  width: 100vw;
+}
+
+table th,
+table td {
+  padding: 8px 4px;
+  text-align: center;
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.form__table--foot--location {
+  display: flex;
+  flex-direction: column;
+  select {
+    margin: 2px auto;
+    width: 100px;
+  }
+}
+
+.btn-edit {
+  @include btnEdit;
+}
+
+.btn-delete {
+  @include btnDel;
+}
+
+.btn-cancel {
+  @include btnCancel;
+}
+
+.btn-save {
+  @include btnSave;
+}
+
+#addContact {
+  font-size: 15px;
+  cursor: pointer;
+  width: 132px;
+  padding: 4px 0;
+  border-radius: 4px;
+  background: transparent;
+  &:focus,
+  &:hover {
+    font-weight: 500;
+    background: rgba(29, 112, 105, 0.777);
+    border-radius: 8px;
+  }
+}
+
+#contactPopup {
+  display: none;
+}
+
+.showPopup {
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  background-color: $highlighted-raw-color;
+}
+
+@media screen and (max-width: 1000px) {
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    margin: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+    border-radius: 10px;
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// .contactTemplate-td {
+//   width: 500px;
+//   display: none;
+// }
+
+// #contactTemplate {
+//   display: none;
+// }

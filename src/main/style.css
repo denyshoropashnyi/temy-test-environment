@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("/fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pe-icon-7-stroke";
+  src: url("/fonts/Pe-icon-7-stroke.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#contactsList tr {
+  cursor: pointer;
+}
+
+#contactsList tr:hover {
+  background-color: rgba(71, 211, 211, 0.9);
+  -webkit-transition: cubic-bezier(0.19, 1, 0.22, 1);
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+input {
+  cursor: pointer;
+}
+
+input :hover {
+  color: rgba(240, 12, 12, 0.95);
+}
+
+.form__table {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr {
+  border: 3px solid #ddd;
+  padding: 5px;
+  width: 100vw;
+}
+
+table th,
+table td {
+  padding: 8px 4px;
+  text-align: center;
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.form__table--foot--location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__table--foot--location select {
+  margin: 2px auto;
+  width: 100px;
+}
+
+.btn-edit {
+  background: rgba(255, 255, 0, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+}
+
+.btn-edit:focus, .btn-edit:hover {
+  background: rgba(255, 255, 0, 0.9);
+  border-radius: 8px;
+}
+
+.btn-delete {
+  background: rgba(255, 0, 0, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+}
+
+.btn-delete:focus, .btn-delete:hover {
+  background: rgba(255, 0, 0, 0.9);
+  border-radius: 8px;
+}
+
+.btn-cancel {
+  background: rgba(120, 120, 120, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+}
+
+.btn-cancel:focus, .btn-cancel:hover {
+  background: rgba(120, 120, 120, 0.9);
+  border-radius: 8px;
+}
+
+.btn-save {
+  background: rgba(0, 255, 0, 0.3);
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+}
+
+.btn-save:focus, .btn-save:hover {
+  background: rgba(0, 255, 0, 0.9);
+  border-radius: 8px;
+}
+
+#addContact {
+  font-size: 15px;
+  cursor: pointer;
+  width: 132px;
+  padding: 4px 0;
+  border-radius: 4px;
+  background: transparent;
+}
+
+#addContact:focus, #addContact:hover {
+  font-weight: 500;
+  background: rgba(29, 112, 105, 0.777);
+  border-radius: 8px;
+}
+
+#contactPopup {
+  display: none;
+}
+
+.showPopup {
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  background-color: rgba(71, 211, 211, 0.9);
+}
+
+@media screen and (max-width: 1000px) {
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+    border-radius: 10px;
+  }
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+/*# sourceMappingURL=style.css.map */
