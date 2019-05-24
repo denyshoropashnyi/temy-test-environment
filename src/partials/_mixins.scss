@@ -1,0 +1,11 @@
+@mixin formBtn($background, $hoverColor) {
+  background: $backgroundColor;
+  width: 66px;
+  padding: 4px 0;
+  border-radius: 4px;
+  &:focus,
+  &:hover {
+    background: $hoverColor;
+    border-radius: 8px;
+  }
+}
