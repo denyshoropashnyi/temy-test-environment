@@ -24,16 +24,17 @@
           <th>Phone Number</th>
           <th>Address</th>
           <th>About me</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>Created At</th>
         </tr>
       </thead>
 
       <tbody id="contactsList" class="form__table--body"></tbody>
 
       <tfoot class="form__table--foot">
-        <tr>
+        <tr id="contactFormRow">
           <td>
+            <input type="hidden" id="idInput" name="idInput">
+
             <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name" />
           </td>
           <td>
@@ -71,7 +72,7 @@
   </form>
 
   <script type="text/template" id="contactTemplate">
-    <tr data-contact-id="{{ id }}" class="{{ class }}">
+    <tr data-contact-id="{{ id }}">     
       <td data-label="Name" class="contactTemplate-td">{{ name }}</td>
       <td data-label="Email" class="contactTemplate-td">{{ email }}</td>
       <td data-label="Location" class="contactTemplate-td">
@@ -81,41 +82,7 @@
       <td data-label="Phone" class="contactTemplate-td">{{ phone }}</td>
       <td data-label="Address" class="contactTemplate-td">{{ address }}</td>
       <td data-label="About" class="contactTemplate-td">{{ about }}</td>
-      <td><button class="btn-edit" type="button">Edit</button></td>
-      <td><button class="btn-delete" type="button">Delete</button></td>
-    </tr>
-  </script>
-
-  <script type="text/template" id="editContactTemplate">
-    <tr data-contact-id="{{ id }}" class="{{ class }}">
-      <td>
-        <input type="text" id="editedContactName" value="{{ name }}" minlength="2" maxlength="30" title="Edit Contact name" />
-      </td>
-      <td>
-        <input type="email" id="editedContactEmail" value="{{ email }}" minlength="6" maxlength="20" title="Edit Contact email" />
-      </td>
-      <td>
-        <select name="countrySelect" id="editedContactCountry" title="Edit Contact country"></select>
-        <select name="stateSelect" id="editedContactState" title="Edit Contact state"></select>
-        <select name="citySelect" id="editedContactCity" title="Edit Contact city"></select>
-      </td>
-      <td>
-        <input type="tel" id="editedContactPhone" value="{{ phone }}" title="Edit Contact phone number" pattern="^[0-9-+s()]*$" />
-      </td>
-      <td>
-        <input type="text" id="editedContactAddress" value="{{ address }}" title="Edit Contact address" />
-      </td>
-      <td>
-        <input type="text" id="editedContactAbout" value="{{ about }}" cols="20" rows="3" maxlength="500"
-          title="Edit Contact information" />
-      </td>
-
-      <td>
-        <button class="btn--cancel" type="button">Cancel</button>
-      </td>
-      <td>
-        <button class="btn--save" type="button">Save</button>
-      </td>
+      <td data-label="Date" class="contactTemplate-td">{{ date }}</td>
     </tr>
   </script>
 </body>
