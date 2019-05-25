@@ -29,6 +29,15 @@ input :hover {
   color: rgba(240, 12, 12, 0.95);
 }
 
+input :invalid {
+  border: 3px solid red;
+  color: red;
+}
+
+input :valid {
+  border-color: #ccc;
+}
+
 .form__table {
   border: 1px solid #ccc;
   margin: 0 auto;

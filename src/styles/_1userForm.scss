@@ -11,6 +11,13 @@ input {
   :hover {
     color: $input-hover-color;
   }
+  :invalid {
+    border: 3px solid red;
+    color: red;
+  }
+  :valid {
+    border-color: #ccc;
+  }
 }
 
 .form__table {
@@ -93,6 +100,7 @@ table td {
   background-color: $highlighted-raw-color;
 }
 
+
 @media screen and (max-width: 1000px) {
   table thead {
     display: none;
@@ -121,6 +129,8 @@ table td {
     }
   }
 }
+
+
 
 // .contactTemplate-td {
 //   width: 500px;

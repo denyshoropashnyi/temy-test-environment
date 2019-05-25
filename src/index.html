@@ -15,62 +15,67 @@
 
 <body>
   <form id="newContactForm">
-    <table class="form__table">
-      <thead class="form__table--head">
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Location</th>
-          <th>Phone Number</th>
-          <th>Address</th>
-          <th>About me</th>
-          <th>Created At</th>
-        </tr>
-      </thead>
+    <fieldset>
+      <table class="form__table">
+        <thead class="form__table--head">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>About me</th>
+            <th>Created At</th>
+          </tr>
+        </thead>
 
-      <tbody id="contactsList" class="form__table--body"></tbody>
+        <tbody id="contactsList" class="form__table--body"></tbody>
 
-      <tfoot class="form__table--foot">
-        <tr id="contactFormRow">
-          <td>
-            <input type="hidden" id="idInput" name="idInput">
-
-            <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name" placeholder = "Input your name" />
-          </td>
-          <td>
-            <input type="email" name="emailInput" id="emailInput" minlength="6" maxlength="20"
-              title="Please input email" placeholder = "Input your email" />
-          </td>
-          <td class="form__table--foot--location">
-            <select name="countrySelect" id="countrySelect" title="Please select country">
-              <option></option>
-            </select>
-            <select name="stateSelect" id="stateSelect" title="Please select state">
-              <option></option>
-            </select>
-            <select name="citySelect" id="citySelect" title="Please select city">
-              <option></option>
-            </select>
-          </td>
-          <td>
-            <input type="tel" name="phoneInput" id="phoneInput" title="Please input phone number"
-              pattern="^[0-9-+s()]*$" placeholder = "Input your phone number" />
-          </td>
-          <td>
-            <input type="text" name="addressInput" id="addressInput" title="You also may input address" placeholder = "Input your adress" />
-          </td>
-          <td>
-            <textarea name="aboutContactInput" id="aboutContactInput" cols="20" rows="3" maxlength="500"
-              title="Input some information about you " placeholder = "Input some information about you"></textarea>
-          </td>
-          <td colspan="2">
-            <input type="submit" id="addContact" value="Add Contact" title="Click to submit" />
-          </td>
-        </tr> 
-      </tfoot>
-    </table>
+        <tfoot class="form__table--foot">
+          <tr id="contactFormRow">
+            <td>
+              <input type="hidden" id="idInput" name="idInput">
+              <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name"
+                placeholder="Input your name" required>
+            </td>
+            <td>
+              <input type="email" name="emailInput" id="emailInput" minlength="6" maxlength="20"
+                title="Please input email" placeholder="Input your email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </td>
+            <td class="form__table--foot--location">
+              <select name="countrySelect" id="countrySelect" title="Please select country" required>
+                <option></option>
+              </select>
+              <select name="stateSelect" id="stateSelect" title="Please select state" required>
+                <option></option>
+              </select>
+              <select name="citySelect" id="citySelect" title="Please select city" required>
+                <option></option>
+              </select>
+            </td>
+            <td>
+              <input type="tel" name="phoneInput" id="phoneInput" minlength="6" maxlength="13"
+                title="Please input phone number" pattern="^[0-9-+s()]*$" placeholder="Input your phone number"
+                required />
+            </td>
+            <td>
+              <input type="text" name="addressInput" id="addressInput" title="You also may input address"
+                placeholder="Input your address" />
+            </td>
+            <td>
+              <textarea name="aboutContactInput" id="aboutContactInput" cols="20" rows="3" maxlength="500"
+                title="Input some information about you " placeholder="Input some information about you"></textarea>
+            </td>
+            <td colspan="2">
+              <input type="submit" id="addContact" value="Add Contact" title="Click to submit" />
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </fieldset>
   </form>
-  
+
   <script type="text/template" id="contactTemplate">
     <tr data-contact-id="{{ id }}">
       <td data-label="Name" class="contactTemplate-td">{{ name }}</td>
