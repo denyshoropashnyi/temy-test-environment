@@ -35,50 +35,52 @@
           <td>
             <input type="hidden" id="idInput" name="idInput">
 
-            <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name" />
+            <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name" placeholder = "Input your name" />
           </td>
           <td>
             <input type="email" name="emailInput" id="emailInput" minlength="6" maxlength="20"
-              title="Please input email" />
+              title="Please input email" placeholder = "Input your email" />
           </td>
           <td class="form__table--foot--location">
             <select name="countrySelect" id="countrySelect" title="Please select country">
-              <option>Choose your country</option>
+              <option></option>
             </select>
             <select name="stateSelect" id="stateSelect" title="Please select state">
-              <option>Choose your state</option>
+              <option></option>
             </select>
             <select name="citySelect" id="citySelect" title="Please select city">
-              <option>Choose your city</option>
+              <option></option>
             </select>
           </td>
           <td>
             <input type="tel" name="phoneInput" id="phoneInput" title="Please input phone number"
-              pattern="^[0-9-+s()]*$" />
+              pattern="^[0-9-+s()]*$" placeholder = "Input your phone number" />
           </td>
           <td>
-            <input type="text" name="addressInput" id="addressInput" title="You also may input address" />
+            <input type="text" name="addressInput" id="addressInput" title="You also may input address" placeholder = "Input your adress" />
           </td>
           <td>
             <textarea name="aboutContactInput" id="aboutContactInput" cols="20" rows="3" maxlength="500"
-              title="Input some information about you "></textarea>
+              title="Input some information about you " placeholder = "Input some information about you"></textarea>
           </td>
           <td colspan="2">
             <input type="submit" id="addContact" value="Add Contact" title="Click to submit" />
           </td>
-        </tr>
+        </tr> 
       </tfoot>
     </table>
   </form>
-
+  
   <script type="text/template" id="contactTemplate">
-    <tr data-contact-id="{{ id }}">     
+    <tr data-contact-id="{{ id }}">
       <td data-label="Name" class="contactTemplate-td">{{ name }}</td>
       <td data-label="Email" class="contactTemplate-td">{{ email }}</td>
       <td data-label="Location" class="contactTemplate-td">
-        {{ country }}
-        {{ state }}
-        {{ city }}</td>
+        <p>{{ country }}</p>
+        <p>{{ state }}</p>
+        <p>{{ city }}</p>
+      </td>
+
       <td data-label="Phone" class="contactTemplate-td">{{ phone }}</td>
       <td data-label="Address" class="contactTemplate-td">{{ address }}</td>
       <td data-label="About" class="contactTemplate-td">{{ about }}</td>
