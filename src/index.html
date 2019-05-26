@@ -19,10 +19,10 @@
       <table class="form__table">
         <thead class="form__table--head">
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Location</th>
-            <th>Phone Number</th>
+            <th>Name <span class="required"></span></th>
+            <th>Email <span class="required"></span></th>
+            <th>Location <span class="required"></span></th>
+            <th>Phone Number <span class="required"></span></th>
             <th>Address</th>
             <th>About me</th>
             <th>Created At</th>
@@ -35,33 +35,34 @@
           <tr id="contactFormRow">
             <td>
               <input type="hidden" id="idInput" name="idInput">
-              <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name"
-                placeholder="Input your name *" required>
+              <input type="text" name="nameInput" id="nameInput" class="reqired" minlength="2" maxlength="30"
+                title="Please input name" placeholder="Input your name" pattern="/[a-z]/gi" required>
             </td>
             <td>
               <input type="email" name="emailInput" id="emailInput" minlength="6" maxlength="20"
                 title="Please input email" placeholder="Input your email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             </td>
-            <td class="form__table--foot--location">
-              <select name="countrySelect" id="countrySelect" title="Please select country" >
+            <td class="form__table--foot--location" id="locationSelect">
+              <select name="countrySelect" id="countrySelect" title="Please select country" required>
                 <option></option>
               </select>
-              <select name="stateSelect" id="stateSelect" title="Please select state" disabled>
+              <select name="stateSelect" id="stateSelect" class="location__select--hidden" title="Please select state"
+                required>
                 <option></option>
               </select>
-              <select name="citySelect" id="citySelect" title="Please select city" disabled>
+              <select name="citySelect" id="citySelect" class="location__select--hidden" title="Please select city"
+                required>
                 <option></option>
               </select>
             </td>
             <td>
-              <input type="tel" name="phoneInput" id="phoneInput" minlength="6" maxlength="13"
-                title="Please input phone number" pattern="^[0-9-+s()]*$" placeholder="Input your phone number"
-                required />
+              <input type="tel" name="phoneInput" id="phoneInput" minlength="6" maxlength="13" title="number only"
+                pattern="[0-9]+" placeholder="Input your phone number" required />
             </td>
             <td>
               <input type="text" name="addressInput" id="addressInput" title="You also may input address"
-                placeholder="Input your address" />
+                placeholder="Input your address" maxlength="27" />
             </td>
             <td>
               <textarea name="aboutContactInput" id="aboutContactInput" cols="20" rows="3" maxlength="500"
