@@ -21,6 +21,10 @@
   transition: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+fieldset {
+  border: none;
+}
+
 input {
   cursor: pointer;
 }
@@ -55,7 +59,7 @@ table tr {
 table th {
   font-family: "Pe-icon-7-stroke";
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   padding: 8px 4px;
   text-align: center;
@@ -144,18 +148,6 @@ table td {
   border-radius: 8px;
 }
 
-#contactPopup {
-  display: none;
-}
-
-.showPopup {
-  display: inline-block;
-  position: fixed;
-  top: 0px;
-  height: 100%;
-  background-color: rgba(71, 211, 211, 0.9);
-}
-
 @media screen and (max-width: 1000px) {
   table thead {
     display: none;
@@ -180,6 +172,16 @@ table td {
     float: left;
     font-weight: bold;
     text-transform: uppercase;
+  }
+  .form__table--foot--location {
+    margin-right: 40px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .form__table--foot--location select {
+    margin: 2px;
+    width: 120px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,10 @@
   }
 }
 
+fieldset {
+  border: none;
+}
+
 input {
   cursor: pointer;
   :hover {
@@ -37,7 +41,7 @@ table tr {
 table th {
   font-family: "Pe-icon-7-stroke";
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   padding: 8px 4px;
   text-align: center;
@@ -88,19 +92,6 @@ table td {
   }
 }
 
-#contactPopup {
-  display: none;
-}
-
-.showPopup {
-  display: inline-block;
-  position: fixed;
-  top: 0px;
-  height: 100%;
-  background-color: $highlighted-raw-color;
-}
-
-
 @media screen and (max-width: 1000px) {
   table thead {
     display: none;
@@ -128,15 +119,12 @@ table td {
       text-transform: uppercase;
     }
   }
+  .form__table--foot--location {
+    margin-right: 40px;
+    align-items: flex-end;
+    select {
+      margin: 2px;
+      width: 120px;
+    }
+  }
 }
-
-
-
-// .contactTemplate-td {
-//   width: 500px;
-//   display: none;
-// }
-
-// #contactTemplate {
-//   display: none;
-// }
