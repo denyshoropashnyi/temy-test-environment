@@ -36,7 +36,7 @@
             <td>
               <input type="hidden" id="idInput" name="idInput">
               <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name"
-                placeholder="Input your name" required>
+                placeholder="Input your name *" required>
             </td>
             <td>
               <input type="email" name="emailInput" id="emailInput" minlength="6" maxlength="20"
@@ -44,13 +44,13 @@
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             </td>
             <td class="form__table--foot--location">
-              <select name="countrySelect" id="countrySelect" title="Please select country" required>
+              <select name="countrySelect" id="countrySelect" title="Please select country" >
                 <option></option>
               </select>
-              <select name="stateSelect" id="stateSelect" title="Please select state" required>
+              <select name="stateSelect" id="stateSelect" title="Please select state" disabled>
                 <option></option>
               </select>
-              <select name="citySelect" id="citySelect" title="Please select city" required>
+              <select name="citySelect" id="citySelect" title="Please select city" disabled>
                 <option></option>
               </select>
             </td>
@@ -67,7 +67,7 @@
               <textarea name="aboutContactInput" id="aboutContactInput" cols="20" rows="3" maxlength="500"
                 title="Input some information about you " placeholder="Input some information about you"></textarea>
             </td>
-            <td colspan="2">
+            <td>
               <input type="submit" id="addContact" value="Add Contact" title="Click to submit" />
             </td>
           </tr>
@@ -85,7 +85,6 @@
         <p>{{ state }}</p>
         <p>{{ city }}</p>
       </td>
-
       <td data-label="Phone" class="contactTemplate-td">{{ phone }}</td>
       <td data-label="Address" class="contactTemplate-td">{{ address }}</td>
       <td data-label="About" class="contactTemplate-td">{{ about }}</td>

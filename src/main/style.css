@@ -11,6 +11,36 @@
   font-weight: normal;
 }
 
+#newContactForm input {
+  font-size: 14px;
+  margin: 0 0.25rem;
+  height: 27px;
+  min-width: 125px;
+  border: 3px solid #eee;
+  border-left: 5px solid;
+  border-radius: 4px;
+  -webkit-transition: border-color 1.5s ease-out;
+  transition: border-color 1.5s ease-out;
+  padding-left: 4px;
+}
+
+#newContactForm input:optional {
+  border-left-color: #999;
+  background: rgba(153, 153, 153, 0.4);
+}
+
+#newContactForm input:required {
+  border-left-color: palegreen;
+  border-left-width: 5px;
+  background: rgba(152, 251, 152, 0.4);
+}
+
+#newContactForm input:invalid {
+  border-left-color: salmon;
+  border-left-width: 5px;
+  background: rgba(250, 128, 114, 0.6);
+}
+
 #contactsList tr {
   cursor: pointer;
 }
@@ -25,26 +55,9 @@ fieldset {
   border: none;
 }
 
-input {
-  cursor: pointer;
-}
-
-input :hover {
-  color: rgba(240, 12, 12, 0.95);
-}
-
-input :invalid {
-  border: 3px solid red;
-  color: red;
-}
-
-input :valid {
-  border-color: #ccc;
-}
-
 .form__table {
   border: 1px solid #ccc;
-  margin: 0 auto;
+  margin: 0 5px;
   padding: 0;
   border-collapse: collapse;
   border-spacing: 0;
@@ -85,71 +98,22 @@ table td {
   width: 100px;
 }
 
-.btn-edit {
-  background: rgba(255, 255, 0, 0.3);
-  width: 66px;
-  padding: 4px 0;
-  border-radius: 4px;
-}
-
-.btn-edit:focus, .btn-edit:hover {
-  background: rgba(255, 255, 0, 0.9);
-  border-radius: 8px;
-}
-
-.btn-delete {
-  background: rgba(255, 0, 0, 0.3);
-  width: 66px;
-  padding: 4px 0;
-  border-radius: 4px;
-}
-
-.btn-delete:focus, .btn-delete:hover {
-  background: rgba(255, 0, 0, 0.9);
-  border-radius: 8px;
-}
-
-.btn-cancel {
-  background: rgba(120, 120, 120, 0.3);
-  width: 66px;
-  padding: 4px 0;
-  border-radius: 4px;
-}
-
-.btn-cancel:focus, .btn-cancel:hover {
-  background: rgba(120, 120, 120, 0.9);
-  border-radius: 8px;
-}
-
-.btn-save {
-  background: rgba(0, 255, 0, 0.3);
-  width: 66px;
-  padding: 4px 0;
-  border-radius: 4px;
-}
-
-.btn-save:focus, .btn-save:hover {
-  background: rgba(0, 255, 0, 0.9);
-  border-radius: 8px;
-}
-
 #addContact {
-  font-size: 15px;
   cursor: pointer;
   width: 132px;
-  padding: 4px 0;
+  padding: 2px 0;
   border-radius: 4px;
-  background: transparent;
+  background: rgba(144, 238, 144, 0.5);
 }
 
 #addContact:focus, #addContact:hover {
   font-weight: 500;
-  background: rgba(29, 112, 105, 0.777);
+  background: rgba(90, 206, 12, 0.777);
   border-radius: 8px;
 }
 
 @media screen and (max-width: 1000px) {
-  table thead {
+  .form__table thead {
     display: none;
   }
   table tr {
@@ -158,16 +122,28 @@ table td {
     border-bottom: 2px solid #ddd;
     border-radius: 10px;
   }
-  table td {
-    display: block;
+  .form__table td {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     text-align: right;
     font-size: 13px;
     border-bottom: 1px solid #ccc;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-right: 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
   }
-  table td:last-child {
+  .form__table td:last-child {
     border-bottom: 0;
   }
-  table td:before {
+  .form__table td:before {
     content: attr(data-label);
     float: left;
     font-weight: bold;

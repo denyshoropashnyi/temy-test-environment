@@ -59,6 +59,7 @@ function fetchCities() {
 
 function renderOption(data, element) {
   data.forEach((el) => addOption(el, element));
+  console.log( el )
 }
 
 function addOption(data, el) {
