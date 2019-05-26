@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
 @font-face {
   font-family: "OpenSans-SemiBold";
   src: url("/src/fonts/OpenSans-SemiBold.ttf") format("truetype");
@@ -9,6 +16,10 @@
   font-family: "Pe-icon-7-stroke";
   src: url("/src/fonts/Pe-icon-7-stroke.ttf") format("truetype");
   font-weight: normal;
+}
+
+#newContactForm {
+  font-size: 16px;
 }
 
 #newContactForm input {
@@ -39,6 +50,10 @@
   border-left-color: salmon;
   border-left-width: 5px;
   background: rgba(250, 128, 114, 0.6);
+}
+
+#newContactForm input:valid {
+  font-weight: 666;
 }
 
 #contactsList tr {
@@ -98,6 +113,10 @@ table td {
   width: 100px;
 }
 
+.location__select--hidden {
+  display: none;
+}
+
 #addContact {
   cursor: pointer;
   width: 132px;
@@ -112,7 +131,10 @@ table td {
   border-radius: 8px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1281px) {
+  #newContactForm {
+    font-size: 13px;
+  }
   .form__table thead {
     display: none;
   }
@@ -158,6 +180,19 @@ table td {
   .form__table--foot--location select {
     margin: 2px;
     width: 120px;
+  }
+}
+
+.required:after {
+  color: #e32;
+  content: " *";
+  display: inline-block;
+  height: 25px;
+}
+
+@media screen and (max-width: 1280px) {
+  #newContactForm {
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */

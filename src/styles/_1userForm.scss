@@ -1,3 +1,7 @@
+#newContactForm {
+  font-size: 16px;
+}
+
 #newContactForm input {
   font-size: 14px;
   margin: 0 0.25rem;
@@ -21,6 +25,9 @@
     border-left-color: salmon;
     border-left-width: 5px;
     background: rgba(250, 128, 114, 0.6);
+  }
+  &:valid {
+    font-weight: 666;
   }
 }
 
@@ -73,6 +80,10 @@ table td {
   }
 }
 
+.location__select--hidden {
+  display: none;
+}
+
 #addContact {
   cursor: pointer;
   width: 132px;
@@ -87,7 +98,11 @@ table td {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1281px) {
+  #newContactForm {
+    font-size: 13px;
+  }
+
   .form__table thead {
     display: none;
   }
@@ -126,5 +141,18 @@ table td {
       margin: 2px;
       width: 120px;
     }
+  }
+}
+
+.required:after {
+  color: #e32;
+  content: " *";
+  display: inline-block;
+  height: 25px;
+}
+
+@media screen and (max-width: 1280px) {
+  #newContactForm {
+    font-size: 13px;
   }
 }
