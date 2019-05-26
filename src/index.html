@@ -35,12 +35,12 @@
           <tr id="contactFormRow">
             <td>
               <input type="hidden" id="idInput" name="idInput">
-              <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input name"
+              <input type="text" name="nameInput" id="nameInput" minlength="2" maxlength="30" title="Please input only letters"
                 placeholder="Input your name" pattern="[A-Za-z]" required>
             </td>
             <td>
               <input type="email" name="emailInput" id="emailInput" minlength="6" maxlength="20"
-                title="Please input email" placeholder="Input your email"
+                title="Please input email" placeholder="Please input valid email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             </td>
             <td class="form__table--foot--location" id="locationSelect">
@@ -66,7 +66,7 @@
             </td>
             <td>
               <textarea name="aboutContactInput" id="aboutContactInput" cols="20" rows="3" maxlength="500"
-                title="Input some information about you " placeholder="Input some information about you"></textarea>
+                title="Input some information about you " placeholder="Input some information about you if You want"></textarea>
             </td>
             <td>
               <input type="submit" id="addContact" value="Add Contact" title="Click to submit" />
